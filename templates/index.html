@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>URL Shortener</title>
+</head>
+<body>
+    <h1>URL Shortener</h1>
+    
+    <form action="{{ url_for('index') }}" method="POST">
+        <input type="text" name="url" placeholder="Enter your link">
+        <input type="submit" value="Shorten">
+    </form>
+    
+    {% if url %}
+    <p>shortened link: <a href="{{ url }}">{{ url }}</a></p>
+    {% endif %}
+
+    <a href="{{ url_for('index') }}">refresh the page</a>
+</body>
+</html>
