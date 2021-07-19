@@ -1,1 +1,1 @@
-web: gunicorn app:simple-flask-url-shortener
+web: gunicorn app:app
